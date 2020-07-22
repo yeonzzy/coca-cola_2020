@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+.videoBox{
+    width: 100%;
+    height: auto;
+}
+    
+#videoBg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.videoLogo{
+    position: absolute; 
+    margin-left: -150px;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: auto;
+    display: none;
+}
+
+.videoLogo img{
+    width: 300px;
+    height: 95px;
+    display: block;
+    
+}
+
+.sinceTxt{
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 50%;
+    margin-left: -60px;
+    overflow: hidden;
+    display: block;
+    opacity: 0.7;
+}
+
+.sinceTxt .sinTxt p{
+    display: block;
+    font-size: 30px;
+    font-weight:100;
+    color: #fff;
+    text-align: center;
+    height: 100px;
+    line-height: 30px;
+/*    font-family: 'Leckerli One', cursive;*/
+/*    font-family: 'Pacifico', cursive;*/
+    font-family: 'Shrikhand', cursive;
+}
+
+.sinceTxt .sinTxt{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    padding-top: 100px;
+}
+
+.sinceTxt .sinTxt.inner-since1{
+    left: 0;
+}
+
+.sinceTxt .sinTxt.inner-since2{
+    left: 30px;
+}
+
+.sinceTxt .sinTxt.inner-since3{
+    left: 60px;
+}
+
+.sinceTxt .sinTxt.inner-since4{
+    right: 0;
+}
+
+.lodingBar{
+    width: 0;
+    height:5px;
+    background: #fff;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+}
+
+.mouse{
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.mouse span.clickTxt{
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 25%;
+    letter-spacing: 1px;
+}
+
+.mouse img{
+    width: 20px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: 20%;
+}

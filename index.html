@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>coca-cola</title>
+    <script src="js/commons/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/commons/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="header">
+            <div class="inner-header">
+                <div class="topMenu">
+                    <div class="location">
+                        <img src="img/commons/header/gnb_location.png" alt="gnb-location">
+                    </div>
+                    <div class="locationPop">
+                        <div class="inner-locationPop">
+                            <span class="locaClose">X</span>
+                            <div class="locationTitle">
+                                <h1>LOCATION</h1>
+                            </div>
+                            <div class="loca northAmerica">
+                                <ul>
+                                    <li class="locaTitle">NORTH AMERICA</li>
+                                    <li class="locaChild "><a href="">United States</a></li>
+                                    <li class="locaChild"><a href="">Canada</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca latinAmerica">
+                                <ul>
+                                    <li class="locaTitle">LATIN AMERICA</li>
+                                    <li class="locaChild"><a href="#">Argantina</a></li>
+                                    <li class="locaChild"><a href="#">Bahams</a></li>
+                                    <li class="locaChild"><a href="#">Belize</a></li>
+                                    <li class="locaChild"><a href="#">Bolivia</a></li>
+                                    <li class="locaChild"><a href="#">Colombia</a></li>
+                                    <li class="locaChild"><a href="#">México</a></li>
+                                    <li class="locaChild"><a href="#">Perú</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca europe">
+                                <ul>
+                                    <li class="locaTitle">Europe</li>
+                                    <li class="locaChild"><a href="#">Austria</a></li>
+                                    <li class="locaChild"><a href="#">Belgium</a></li>
+                                    <li class="locaChild"><a href="#">België</a></li>
+                                    <li class="locaChild"><a href="#">Finland</a></li>
+                                    <li class="locaChild"><a href="#">Spain</a></li>
+                                    <li class="locaChild"><a href="#">Romania</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca eurasia">
+                                <ul>
+                                    <li class="locaTitle">Eurasia</li>
+                                    <li class="locaChild"><a href="#">Armenia</a></li>
+                                    <li class="locaChild"><a href="#">Georgia</a></li>
+                                    <li class="locaChild"><a href="#">India</a></li>
+                                    <li class="locaChild"><a href="#">Turkey</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca africa">
+                                <ul>
+                                    <li class="locaTitle">Africa</li>
+                                    <li class="locaChild"><a href="#">Algeria</a></li>
+                                    <li class="locaChild"><a href="#">Congo</a></li>
+                                    <li class="locaChild"><a href="#">Egypt</a></li>
+                                    <li class="locaChild"><a href="#">Kenya</a></li>
+                                    <li class="locaChild"><a href="#">Namibia</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca asia">
+                                <ul>
+                                    <li class="locaTitle">Asia</li>
+                                    <li class="locaChild"><a href="#">Australia</a></li>
+                                    <li class="locaChild"><a href="#">Japan</a></li>
+                                    <li class="locaChild"><a href="#">Philippines</a></li>
+                                    <li class="locaChild"><a href="#">Republic of Korea</a></li>
+                                    <li class="locaChild"><a href="#">China</a></li>
+                                    <li class="locaChild"><a href="#">Vietnam</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--location popup menu-->
+                    <script>
+                        //location Icon 클릭 -> popmenu나타내기
+                        $('.location').on('click', locaPopFunc);
+
+                        function locaPopFunc() {
+                            $('.locationPop').css({
+                                'display': 'block'
+                            })
+                            $('.inner-locationPop').animate({
+                                'left': '0'
+                            });
+                        }
+                        //location Title 클릭 -> >ul>li 나타내기
+                        //North America
+                        $('.loca.northAmerica').on('click', northChildFunc);
+
+                        function northChildFunc() {
+                            $('.loca.northAmerica >ul >li.locaChild').slideToggle();
+                        }
+                        //Latin America
+                        $('.loca.latinAmerica').on('click', latinChildFunc);
+
+                        function latinChildFunc() {
+                            $('.loca.latinAmerica >ul >li.locaChild').slideToggle();
+                        }
+                        //Europe
+                        $('.loca.europe').on('click', europeChildFunc);
+
+                        function europeChildFunc() {
+                            $('.loca.europe >ul >li.locaChild').slideToggle();
+                        }
+                        //Eurasia
+                        $('.loca.eurasia').on('click', eurasiaChildFunc);
+
+                        function eurasiaChildFunc() {
+                            $('.loca.eurasia >ul >li.locaChild').slideToggle();
+                        }
+                        //Africa
+                        $('.loca.africa').on('click', africaChildFunc);
+
+                        function africaChildFunc() {
+                            $('.loca.africa >ul >li.locaChild').slideToggle();
+                        }
+                        //Asia
+                        $('.loca.asia').on('click', asiaChildFunc);
+
+                        function asiaChildFunc() {
+                            $('.loca.asia >ul >li.locaChild').slideToggle();
+                        }
+
+                        //Cloase 클릭 -> popmenu사라지게
+                        $('span.locaClose').on('click', locaCloseFunc);
+
+                        function locaCloseFunc() {
+                            $('.locationPop').css({
+                                'display': 'none'
+                            })
+                            $('.inner-locationPop').animate({
+                                'left': '-100%'
+                            });
+                        }
+                    </script>
+
+
+                    <div class="rightMenu">
+                        <div class="login">
+                            <a href="login.html"><img src="img/commons/header/gnb_login.png" alt="gnb_login" title="로그인"></a>
+                        </div>
+                        <div class="search">
+                            <img src="img/commons/header/gnb_search.png" alt="search" title="검색">
+                        </div>
+                        <div class="searchPop">
+                            <div class="inner-searchPop">
+                                <span class="searchClose">X</span>
+                                <div class="search-area">
+                                    <ul>
+                                        <li>
+                                            <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
+                                        </li>
+                                        <li>
+                                            <input type="button" value="Search">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--search popup menu-->
+                        <script>
+                            //search Icon 클릭 -> popmenu나타내기
+                            $('.search>img').on('click', searchPopFunc);
+
+                            function searchPopFunc() {
+                                $('.searchPop').fadeIn();
+                            }
+                            //Cloase 클릭 -> popmenu사라지게
+                            $('span.searchClose').on('click', searchCloseFunc);
+
+                            function searchCloseFunc() {
+                                $('.searchPop').fadeOut();
+                            }
+                        </script>
+
+                    </div>
+                </div>
+                <div class="middleMenu">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/commons/header/gnb_logo.png" alt="gnb-logo"></a>
+                    </div>
+                </div>
+                <div class="bottomMenu">
+                    <div class="inner-gnb">
+                        <div class="gnb">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">브랜드</a></li>
+                                <li><a href="#">스토리</a></li>
+                                <li><a href="#">라이프</a></li>
+                                <li><a href="#">커뮤니티</a></li>
+                            </ul>
+                        </div>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="#">SINCE 1866</a></li>
+                                <li><a href="#">코카콜라 코리아</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                                <li><a href="#">코카콜라 저니</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">음료소개</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">코-크 스토리</a></li>
+                                <li><a href="#">글로벌 스토리</a></li>
+                                <li><a href="#">코-크 앰버서더</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">코-크 라이프</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">이미지갤러리</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var gnbLi = $('.gnb>ul>li');
+
+                    gnbLi.on('mouseenter', subShowFunc);
+
+                    function subShowFunc() {
+                        $('.subMenu').slideDown();
+                    }
+
+                    $('.inner-gnb').on('mouseleave', subHideFunc);
+
+                    function subHideFunc() {
+                        $('.subMenu').stop().slideUp();
+                    }
+
+
+                    var subUl = $('.subMenu>ul');
+                    //1.회사소개 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(0).hover(
+                        function() {
+                            gnbLi.eq(0).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(0).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(0).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(0).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //2. 브랜드 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(1).hover(
+                        function() {
+                            gnbLi.eq(1).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(1).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(1).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(1).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //3. 스토리 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(2).hover(
+                        function() {
+                            gnbLi.eq(2).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(2).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(2).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(2).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //4. 라이프 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(3).hover(
+                        function() {
+                            gnbLi.eq(3).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(3).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(3).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(3).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //5. 커뮤니티 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(4).hover(
+                        function() {
+                            gnbLi.eq(4).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(4).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(4).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(4).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                </script>
+            </div>
+
+            <div class="scroll-header">
+                <div class="inner-scroll-header">
+                    <div class="sGnb">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/commons/header/gnb_logo.png" alt="logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">회사소개</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="">SINCE 1866</a></li>
+                                        <li><a href="#">코카콜라 코리아</a></li>
+                                        <li><a href="#">사회공헌</a></li>
+                                        <li><a href="#">코카콜라 저니</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">브랜드</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="">음료소개</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">스토리</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="#">코-크 스토리</a></li>
+                                        <li><a href="#">글로벌 스토리</a></li>
+                                        <li><a href="#">코-크 앰버서더</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">라이프</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="#">코-크 라이프</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">커뮤니티</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="#">보도자료</a></li>
+                                        <li><a href="#">이벤트</a></li>
+                                        <li><a href="#">이미지갤러리</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/commons/header/gnb_login.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/commons/header/gnb_search.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                $(window).on('scroll', scrollFunc);
+
+                function scrollFunc() {
+                    var docScrollTop = $(document).scrollTop();
+                    if (docScrollTop > 300) {
+
+                        $('.inner-header').css({
+                            'display': 'none'
+                        });
+                        $('.scroll-header').fadeIn();
+
+                    } else if (docScrollTop <= 200) {
+
+                        $('.scroll-header').fadeOut(0);
+                        $('.inner-header').css({
+                            'display': 'block'
+                        });
+
+                    }
+                }
+
+                var sGnbLi = $('.sGnb>ul>li');
+                
+                for(var i=1; i<sGnbLi.length-2; i++){
+                    sGnbLi.eq(i).on('mouseenter', sGnbEnterFunc);
+                    function sGnbEnterFunc() {
+                    $('.sub').stop().slideDown();
+                    $('.inner-scroll-header').animate({
+                        height: '270px'
+                    });
+                    }
+                }
+
+                $('.sub').on('mouseleave', sGnbLeaveFunc);
+
+                function sGnbLeaveFunc() {
+                    $('.sub').stop().slideUp();
+                    $('.inner-scroll-header').animate({
+                        height: '70px'
+                    });
+                }
+
+
+
+
+                //                //1.scrollGnb.eq(1) : 회사소개 hover 시
+                //                sGnbLi.eq(1).hover(
+                //                    function() {
+                //                        sGnbLi.eq(1).css({
+                //                            'background': '#e61d2a',
+                //                            'color':'#fff' 
+                //                        });
+                //                    },
+                //                    function() {
+                //                        sGnbLi.eq(1).css({
+                //                            'background': '#fff',
+                //                            'color':'#fff'
+                //                        });
+                //                    }
+                //                );
+                //                //2.scrollGnb.eq(2) : 브랜드 hover 시
+                //                sGnbLi.eq(2).hover(
+                //                    function() {
+                //                        sGnbLi.eq(2).css({
+                //                            'border-bottom': '2px solid #e61d2a'
+                //                        });
+                //                    },
+                //                    function() {
+                //                        sGnbLi.eq(2).css({
+                //                            'border-bottom': '0px'
+                //                        });
+                //                    }
+                //                );
+                //                //3.scrollGnb.eq(3) : 스토리 hover 시
+                //                sGnbLi.eq(3).hover(
+                //                    function() {
+                //                        sGnbLi.eq(3).css({
+                //                            'border-bottom': '2px solid #e61d2a'
+                //                        });
+                //                    },
+                //                    function() {
+                //                        sGnbLi.eq(3).css({
+                //                            'border-bottom': '0px'
+                //                        });
+                //                    }
+                //                );
+                //                //4.scrollGnb.eq(4) : 라이프 hover 시
+                //                sGnbLi.eq(4).hover(
+                //                    function() {
+                //                        sGnbLi.eq(4).css({
+                //                            'border-bottom': '2px solid #e61d2a'
+                //                        });
+                //                    },
+                //                    function() {
+                //                        sGnbLi.eq(4).css({
+                //                            'border-bottom': '0px'
+                //                        });
+                //                    }
+                //                );
+                //                //5.scrollGnb.eq(5) : 커뮤니티 hover 시
+                //                sGnbLi.eq(5).hover(
+                //                    function() {
+                //                        sGnbLi.eq(5).css({
+                //                            'border-bottom': '2px solid #e61d2a'
+                //                        });
+                //                    },
+                //                    function() {
+                //                        sGnbLi.eq(5).css({
+                //                            'border-bottom': '0px'
+                //                        });
+                //                    }
+                //                );
+            </script>
+        </div>
+        <div class="contents">
+            <div class="inner-con">
+                <!--background-attachment-->
+                <div class="nav">
+                    <div class="navTitle">
+                        언제 어디서나<br>
+                        <span class="nTitlt01">짜릿하고 시원한</span><br>
+                        <span class="nTitle02">이 맛! 이 느낌!</span>
+                        <hr class="line">
+                    </div>
+                </div>
+                <!--info:gif-->
+                <div class="section00">
+                    <div class="s0-text">
+                        <h1>Coca-Cola</h1><br>
+                        <span>글로벌 종합 음료회사, 코카-콜라는 전 세계 200개국 이상에 진출했으며<br>탄산 · 스포츠음료 · 생수 · 주스 · 커피 등 총 500개 이상의 브랜드<br>4,100여 가지 종류의 제품을 보유하고 있다.<br></span>
+                        <h6><a href="#">more></a></h6>
+                    </div>
+                    <div class="s0-img"> </div>
+                </div>
+                <!--SINCE1866:slide-->
+                <div class="section01">
+                    <div class="inner-sec1">
+                        <div class="sec1Title">
+                            <hr class="sec1-line">
+                            <h1 class="secTitle">SINCE 1866</h1><br>
+                            <span class="sinceText">애틀란타에서 일어난 5센트의 상쾌한 아이디어의 탄생</span>
+                        </div>
+                        <div class="sec1Since">
+                            <div class="inner-sec1Since">
+                                <div class="spanList">
+                                    <span class="list on"></span>
+                                    <span class="list"></span>
+                                    <span class="list"></span>
+                                    <span class="list"></span>
+                                    <span class="list"></span>
+                                </div>
+                                <div class="pSince">
+                                    <p class="sinceTxt"><a href="#">1968</a></p>
+                                    <p class="sinceTxt"><a href="#">1976</a></p>
+                                    <p class="sinceTxt"><a href="#">1984</a></p>
+                                    <p class="sinceTxt"><a href="#">1992</a></p>
+                                    <p class="sinceTxt"><a href="#">1994</a></p>
+                                </div>
+                                <span class="slide-bar-bg"></span>
+                                <div class="slide-bar"></div>
+                            </div>
+                        </div>
+                        <div class="sec1Main">
+                            <ul>
+                                <li>
+                                    <span class="sec1Text">19&nbsp;&nbsp;68</span>
+                                    <div class="sec1-Brand">
+                                        <img src="img/sec01_cola.png" alt="sec1-Coke">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="sec1Text">19&nbsp;&nbsp;76</span>
+                                    <div class="sec1-Brand">
+                                        <img src="img/sec01_sunnyten.png" alt="sec1-sunnyten">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="sec1Text">19&nbsp;&nbsp;84</span>
+                                    <div class="sec1-Brand">
+                                        <img src="img/sec01_ambasa.png" alt="sec1-ambasa">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="sec1Text">19&nbsp;&nbsp;92</span>
+                                    <div class="sec1-Brand">
+                                        <img src="img/sec01_sprite.png" alt="sec1-sprite">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="sec1Text">19&nbsp;&nbsp;94</span>
+                                    <div class="sec1-Brand">
+                                        <img src="img/sec01_powerade.png" alt="sec1-powerade">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var key = 0;
+                    var sec1Li = $('.sec1Main>ul>li');
+                    var spanList = $('.spanList span.list');
+
+                    sec1Li.eq(0).show().siblings().hide();
+                    //AutoSlide : Brand
+                    function fadeAutoSlide() {
+                        key++;
+                        //key가 0일 때,
+                        if (key == 0) {
+                            //spanList(key)에 'on'클래스, 나머지는 'on'클래스 제거
+                            spanList.eq(key).addClass('on').siblings().removeClass('on')
+                        }
+                        //sec1>ul>li는 key값에 따라 fadein, fadeout
+                        sec1Li.eq(key).fadeIn(1000).siblings().fadeOut(1000);
+
+                        //96.25px씩 key값에 따라 증가 -> goBar 저장
+                        var goBar = (key * 96.25);
+                        //좌측 슬라이드바의 높이는 gobar에 의해 늘어나고
+                        $('.slide-bar').stop().delay().animate({
+                            height: goBar
+                        }, 800, function() {
+                            //list는 key값에 따라 'on'클래스를 줌.
+                            $('span.list').eq(key).addClass('on');
+                        });
+                        //sec1>ul>li의 길이 -1 이 key값보다 같거나 클 때 AND goBar의 높이가 385보다 같거나 클 때
+                        if (key >= sec1Li.length - 1 && goBar >= 385) {
+                            //key값은 -1로 초기화
+                            key = -1;
+                            return false;
+                        }
+
+                    } //5초마다 AutoSlide 함수 진행.
+                    var setIn = setInterval(fadeAutoSlide, 5000);
+
+                    //hover시 자동갤러리 Stop,Start 제어
+                    var brandSince = $('.sec1Main>ul>li span.sec1Text');
+                    brandSince.hover(
+                        function() {
+                            clearInterval(setIn);
+                        },
+                        function() {
+                            setIn = setInterval(fadeAutoSlide, 3000);
+                        }
+                    );
+                </script>
+
+                <!--Brand:slide-->
+                <div class="section02">
+                    <div class="inner-sec2">
+                        <span class="slideArrow left"></span>
+                        <span class="slideArrow right"></span>
+                        <div class="sec2-slide">
+                            <div class="items">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--items>ul>li 이미지넣기-->
+                    <!--items>ul>li hover효과넣기-->
+                    <script>
+                        var itemsLi = $('.items>ul>li');
+                        var itemsBgArr = [];
+                        for (var i = 0; i < itemsLi.length; i++) {
+                            itemsBgArr.push('url(img/sec02_items0' + i + '.png) no-repeat 50%');
+                            itemsLi.eq(i).css({
+                                'background': itemsBgArr[i]
+                            });
+                        }
+
+                        var arrowLeft = $('span.slideArrow.left');
+                        var arrowRight = $('span.slideArrow.right');
+
+                        arrowLeft.on('click', arrowLeftFunc);
+
+                        function arrowLeftFunc() {
+                            var itemsLi = $('.items>ul>li');
+                            $('.items>ul').append(itemsLi.eq(0));
+
+                        }
+                        arrowRight.on('click', arrowRightFunc);
+
+                        function arrowRightFunc() {
+                            var itemsLi = $('.items>ul>li');
+                            $('.items>ul').prepend(itemsLi.last());
+                        }
+
+                        //cola hover
+                        itemsLi.eq(0).hover(
+                            function() {
+                                itemsLi.eq(0).css({
+                                    'background': 'url(img/sec02_items00-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(0).css({
+                                    'background': 'url(img/sec02_items00.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //sprite hover
+                        itemsLi.eq(1).hover(
+                            function() {
+                                itemsLi.eq(1).css({
+                                    'background': 'url(img/sec02_items01-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(1).css({
+                                    'background': 'url(img/sec02_items01.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //fanta hover
+                        itemsLi.eq(2).hover(
+                            function() {
+                                itemsLi.eq(2).css({
+                                    'background': 'url(img/sec02_items02-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(2).css({
+                                    'background': 'url(img/sec02_items02.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //powerade hover
+                        itemsLi.eq(3).hover(
+                            function() {
+                                itemsLi.eq(3).css({
+                                    'background': 'url(img/sec02_items03-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(3).css({
+                                    'background': 'url(img/sec02_items03.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //minutemaid hover
+                        itemsLi.eq(4).hover(
+                            function() {
+                                itemsLi.eq(4).css({
+                                    'background': 'url(img/sec02_items04-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(4).css({
+                                    'background': 'url(img/sec02_items04.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //georgia hover
+                        itemsLi.eq(5).hover(
+                            function() {
+                                itemsLi.eq(5).css({
+                                    'background': 'url(img/sec02_items05-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(5).css({
+                                    'background': 'url(img/sec02_items05.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //toreta hover
+                        itemsLi.eq(6).hover(
+                            function() {
+                                itemsLi.eq(6).css({
+                                    'background': 'url(img/sec02_items06-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(6).css({
+                                    'background': 'url(img/sec02_items06.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //vitaminWater hover
+                        itemsLi.eq(7).hover(
+                            function() {
+                                itemsLi.eq(7).css({
+                                    'background': 'url(img/sec02_items07-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(7).css({
+                                    'background': 'url(img/sec02_items07.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //sunneyTen hover
+                        itemsLi.eq(8).hover(
+                            function() {
+                                itemsLi.eq(8).css({
+                                    'background': 'url(img/sec02_items08-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(8).css({
+                                    'background': 'url(img/sec02_items08.png) no-repeat 50%'
+                                });
+                            }
+                        );
+
+                        //seagram hover
+                        itemsLi.eq(9).hover(
+                            function() {
+                                itemsLi.eq(9).css({
+                                    'background': 'url(img/sec02_items09-h.png) no-repeat 50%'
+                                });
+                            },
+                            function() {
+                                itemsLi.eq(9).css({
+                                    'background': 'url(img/sec02_items09.png) no-repeat 50%'
+                                });
+                            }
+                        );
+                    </script>
+
+                </div>
+                <!--joureyTV:youtube-->
+                <div class="section03">
+                    <div class="inner-sec3">
+                        <div class="sec3Title">
+                            <hr class="sec3-line">
+                            <h1 class="secTitle">Journey TV</h1><br>
+                            <span class="joureyText">코카-콜라와 함께하는 톡~쏘는 여정, 소통하는 저니!!<br>매일매일 만들어내는 생생한 콘텐츠를 만나보세요.</span>
+                            <h6><a href="https://www.youtube.com/playlist?list=PLi_dgkvr6Fr7Tets1DExrTB5BTTFgcuhi">more ></a></h6>
+                        </div>
+                        <div class="sec3Contents">
+                            <div class="journey01">
+                                <ul>
+                                    <li class="j-img1" onclick="location.href='https://www.youtube.com/watch?v=pdWgIE-eYiQ&list=PLi_dgkvr6Fr7Tets1DExrTB5BTTFgcuhi&index=3&t=0s';">
+                                    <li>
+                                    <li class="j-title1">
+                                        <a href="#">ASMR, 먹방, 상황극까지!
+                                            <br>매력부자 혜리의 맛있게 먹고 쿨~하게 푸는 하루!</a>
+                                        <span>2020.02.21</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="journey02">
+                                <ul>
+                                    <li class="j-img2" onclick="location.href='https://www.youtube.com/watch?v=edfB2XBkhiM&list=PLi_dgkvr6Fr7Tets1DExrTB5BTTFgcuhi&index=4&t=0s';"></li>
+                                    <li class="j-title2">
+                                        <a href="#">김연아의 내레이션
+                                            <br>하트 저수지를 아시나요? 김해 산본, 관동마을 </a>
+                                        <span>2020.01.17</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="journey03">
+                                <ul>
+                                    <li class="j-img3" onclick="location.href='https://www.youtube.com/watch?v=H4PLZeCHAhI&list=PLi_dgkvr6Fr7Tets1DExrTB5BTTFgcuhi&index=6&t=0s';"></li>
+                                    <li class="j-title3">
+                                        <a href="#">코카-콜라의 성지,
+                                            <br>애틀랜타 '월드 오브 코카-콜라'에 간 쭈니형</a>
+                                        <span>2019.12.2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--sec03 hover-->
+                <script>
+                    //sec03 : journey01 부분
+                    var title_Ahover1 = $('.journey01 >ul >li.j-title1 a');
+                    title_Ahover1.hover(
+                        function() {
+                            $('.journey01 >ul >li.j-title1').css({
+                                'background': '#e11425'
+                            });
+                            title_Ahover1.css({
+                                'color': '#fff',
+                                'text-decoration': 'underline'
+                            });
+                        },
+                        function() {
+                            $('.journey01 >ul >li.j-title1').css({
+                                'background': '#fff'
+                            });
+                            title_Ahover1.css({
+                                'color': '#161616',
+                                'text-decoration': 'none'
+                            });
+                        }
+                    );
+
+                    //sec03 : journey02 부분
+                    var title_Ahover2 = $('.journey02 >ul >li.j-title2 a');
+                    title_Ahover2.hover(
+                        function() {
+                            $('.journey02 >ul >li.j-title2').css({
+                                'background': '#e11425'
+                            });
+                            title_Ahover2.css({
+                                'color': '#fff',
+                                'text-decoration': 'underline'
+                            });
+                        },
+                        function() {
+                            $('.journey02 >ul >li.j-title2').css({
+                                'background': '#fff'
+                            });
+                            title_Ahover2.css({
+                                'color': '#161616',
+                                'text-decoration': 'none'
+                            });
+                        }
+                    );
+
+                    //sec03 : journey03 부분
+                    var title_Ahover3 = $('.journey03 >ul >li.j-title3 a');
+                    title_Ahover3.hover(
+                        function() {
+                            $('.journey03 >ul >li.j-title3').css({
+                                'background': '#e11425'
+                            });
+                            title_Ahover3.css({
+                                'color': '#fff',
+                                'text-decoration': 'underline'
+                            });
+                        },
+                        function() {
+                            $('.journey03 >ul >li.j-title3').css({
+                                'background': '#fff'
+                            });
+                            title_Ahover3.css({
+                                'color': '#161616',
+                                'text-decoration': 'none'
+                            });
+                        }
+                    );
+                </script>
+                <!--Event:slide-->
+                <div class="section04">
+                    <div class="inner-sec4">
+                        <div class="sec4Title">
+                            <hr class="sec4-line">
+                            <h1 class="secTitle">Event</h1><br>
+                            <span class="eventText">올해도 코카-콜라와 다양한이벤트를 함께해요.</span>
+                        </div>
+                        <div class="sec4Sns">
+                            <ul>
+                                <li class="sec4-sns-face">
+                                    <span onclick="window.open('https://www.facebook.com/Coca-Cola')"></span>
+                                </li>
+                                <li class="sec4-sns-ins">
+                                    <span onclick="window.open('https://www.instagram.com/coke.style/')"></span>
+                                </li>
+                                <li class="sec4-sns-you">
+                                    <span onclick="window.open('https://www.youtube.com/user/openhappinesskorea')"></span>
+                                </li>
+                                <li class="sec4-sns-twi">
+                                    <span onclick="window.open('https://twitter.com/CocaCola_Korea')"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sec4-event">
+                            <div class="inner-sec4-event">
+                                <div class="eventGallery">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.instagram.com/p/B-0n4umgoy3/?utm_source=ig_web_copy_link" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/p/B-EEuzvpgHy/?utm_source=ig_web_copy_link" target="_blank"></a>
+                                        </li>
+                                        <li class="on2">
+                                            <a href="https://www.instagram.com/p/CBxScX2gQty/?utm_source=ig_web_copy_link" target="_blank"></a></li>
+                                        <li>
+                                            <a href="https://www.instagram.com/p/CB7PlYXAsVa/?utm_source=ig_web_copy_link" target="_blank"></a></li>
+                                        <li>
+                                            <a href="https://www.instagram.com/p/CAZvWeIpaUx/?utm_source=ig_web_copy_link" target="_blank"></a></li>
+                                    </ul>
+                                </div>
+                                <span class="arrow left">
+                                    <img src="img/sec04-arrow-left-2.png" alt="sec04-arrow-left">
+                                </span>
+                                <span class="arrow right">
+                                    <img src="img/sec04-arrow-right-2.png" alt="sec04-arrow-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    //윈도우 로드되면 eventGallery 실행.
+                    $(document).ready(function() {
+                        //배열로 배경넣기
+                        var eventGallLi = $('.eventGallery>ul>li');
+                        var gallBgArr = [];
+                        for (var i = 0; i < eventGallLi.length; i++) {
+                            gallBgArr.push('url(img/sec04-event-img0' + i + '.jpg) no-repeat 50%');
+                            eventGallLi.eq(i).css({
+                                'background': gallBgArr[i],
+                                'background-size': 'cover'
+                            });
+                        }
+                                //이벤트갤러리 함수 생성 :  append이용 -> 3초마다 append
+                        function eventGallery() {
+                            var eventGallLi = $('.eventGallery>ul>li');
+                            $('.eventGallery>ul').append(eventGallLi.eq(0));
+                            //항상 가운데에 on2클래스 나머지들은 on2클래스 제거
+                            //처음엔 eq(2)에 on2클래스 (0-1-2-3-4) : html
+                                        //append되면서 eq(3)이 eq(2)자리로 이동하므로,
+                                        //eq(3)에 on2클래스 나머지는 on2클래스 제거
+                            eventGallLi.eq(3).addClass('on2').siblings().removeClass('on2');
+                        }
+                        var timer = setInterval(eventGallery, 3500);
+                        
+                        //마우스 오버, 아웃 시 setInterval 제어
+                        var eventGallLi = $('.eventGallery>ul>li');
+                        eventGallLi.hover(
+                            function() {
+                                clearInterval(timer);
+                            },
+                            function() {
+                                timer = setInterval(eventGallery, 3000);
+                            }
+                        );
+                        //arrow img 클릭 시 이전-다음 제어
+                        //arrow left 클릭 시 이전으로 
+                        $('span.arrow.left img').on('click', prevFunc);
+                                //이전 : append 이용
+                        function prevFunc() {
+                            var eventGallLi = $('.eventGallery>ul>li');
+                            $('.eventGallery>ul').append(eventGallLi.eq(0));
+                            eventGallLi.eq(3).addClass('on2').siblings().removeClass('on2');
+                        }
+                        //arrow right 클릭 시 다음으로 
+                        $('span.arrow.right img').on('click', nextFunc);
+                                //다음 : prepend 이용
+                        function nextFunc() {
+                            var eventGallLi = $('.eventGallery>ul>li');
+                            $('.eventGallery>ul').prepend(eventGallLi.last());
+                                    //eq(1)이 prepend되면 eq(2)자리로 이동하므로,
+                                    //eq(1)에 'on2'클래스 나머지는 on2클래스 제거
+                            eventGallLi.eq(1).addClass('on2').siblings().removeClass('on2');
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="inner-foot">
+                <div class="topFoot">
+                    <div class="footMenu">
+                        <ul>
+                            <li><a href="#">오시는 길</a></li>
+                            <li class="list">|</li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li class="list">|</li>
+                            <li><a href="#">1:1문의하기</a></li>
+                            <li class="list">|</li>
+                            <li class="location-icon"><a href="#"><img src="img/commons/footer/footer_location.png" alt="footer_location"></a></li>
+                        </ul>
+                    </div>
+                    <div class="middleFoot">
+                        <div class="info">
+                            <div class="add">
+                                서울시 종로구 새문안로 68 흥국생명빌딩 10층 한국 코카-콜라<br>고객센터 : 080-024-5999 (월~금 09:00 ~ 18:00)
+                            </div>
+                            <div class="sns">
+                                <ul>
+                                    <li class="sns-face">
+                                        <a href="https://www.facebook.com/Coca-Cola" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_facebook.png" alt="footer_sns_facebook"></a>
+                                    </li>
+                                    <li class="sns-in">
+                                        <a href="https://www.instagram.com/coke.style/" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_instagram01.png" alt="footer_sns_instagram01">
+                                        </a>
+                                    </li>
+                                    <li class="sns-you">
+                                        <a href="https://www.youtube.com/user/openhappinesskorea" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_youtube.png" alt="footer_sns_youtube">
+                                        </a>
+                                    </li>
+                                    <li class="sns-twi">
+                                        <a href="https://twitter.com/CocaCola_Korea" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_twitter.png" alt="footer_sns_twitter">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomFoot">
+                    <span class="footer-line"></span>
+                    <div class="inner-bFoot">
+                        <div class="logo"><img src="img/commons/footer/footer_logo.png" alt="footer_logo"></div>
+                        <div class="copyright">Copyright 2020 @ Coca-Cola KOREA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>
