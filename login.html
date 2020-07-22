@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <script src="js/commons/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/commons/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="header">
+            <div class="inner-header">
+                <div class="topMenu">
+                    <div class="location">
+                        <img src="img/commons/header/gnb_location.png" alt="gnb-location">
+                    </div>
+                    <div class="locationPop">
+                        <div class="inner-locationPop">
+                            <span class="locaClose">X</span>
+                            <div class="locationTitle">
+                                <h1>LOCATION</h1>
+                            </div>
+                            <div class="loca northAmerica">
+                                <ul>
+                                    <li class="locaTitle">NORTH AMERICA</li>
+                                    <li class="locaChild "><a href="">United States</a></li>
+                                    <li class="locaChild"><a href="">Canada</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca latinAmerica">
+                                <ul>
+                                    <li class="locaTitle">LATIN AMERICA</li>
+                                    <li class="locaChild"><a href="#">Argantina</a></li>
+                                    <li class="locaChild"><a href="#">Bahams</a></li>
+                                    <li class="locaChild"><a href="#">Belize</a></li>
+                                    <li class="locaChild"><a href="#">Bolivia</a></li>
+                                    <li class="locaChild"><a href="#">Colombia</a></li>
+                                    <li class="locaChild"><a href="#">México</a></li>
+                                    <li class="locaChild"><a href="#">Perú</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca europe">
+                                <ul>
+                                    <li class="locaTitle">Europe</li>
+                                    <li class="locaChild"><a href="#">Austria</a></li>
+                                    <li class="locaChild"><a href="#">Belgium</a></li>
+                                    <li class="locaChild"><a href="#">België</a></li>
+                                    <li class="locaChild"><a href="#">Finland</a></li>
+                                    <li class="locaChild"><a href="#">Spain</a></li>
+                                    <li class="locaChild"><a href="#">Romania</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca eurasia">
+                                <ul>
+                                    <li class="locaTitle">Eurasia</li>
+                                    <li class="locaChild"><a href="#">Armenia</a></li>
+                                    <li class="locaChild"><a href="#">Georgia</a></li>
+                                    <li class="locaChild"><a href="#">India</a></li>
+                                    <li class="locaChild"><a href="#">Turkey</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca africa">
+                                <ul>
+                                    <li class="locaTitle">Africa</li>
+                                    <li class="locaChild"><a href="#">Algeria</a></li>
+                                    <li class="locaChild"><a href="#">Congo</a></li>
+                                    <li class="locaChild"><a href="#">Egypt</a></li>
+                                    <li class="locaChild"><a href="#">Kenya</a></li>
+                                    <li class="locaChild"><a href="#">Namibia</a></li>
+                                </ul>
+                            </div>
+                            <div class="loca asia">
+                                <ul>
+                                    <li class="locaTitle">Asia</li>
+                                    <li class="locaChild"><a href="#">Australia</a></li>
+                                    <li class="locaChild"><a href="#">Japan</a></li>
+                                    <li class="locaChild"><a href="#">Philippines</a></li>
+                                    <li class="locaChild"><a href="#">Republic of Korea</a></li>
+                                    <li class="locaChild"><a href="#">China</a></li>
+                                    <li class="locaChild"><a href="#">Vietnam</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--location popup menu-->
+                    <script>
+                        //location Icon 클릭 -> popmenu나타내기
+                        $('.location').on('click', locaPopFunc);
+
+                        function locaPopFunc() {
+                            $('.locationPop').css({
+                                'display': 'block'
+                            })
+                            $('.inner-locationPop').animate({
+                                'left': '0'
+                            });
+                        }
+                        //location Title 클릭 -> >ul>li 나타내기
+                        //North America
+                        $('.loca.northAmerica').on('click', northChildFunc);
+
+                        function northChildFunc() {
+                            $('.loca.northAmerica >ul >li.locaChild').slideToggle();
+                        }
+                        //Latin America
+                        $('.loca.latinAmerica').on('click', latinChildFunc);
+
+                        function latinChildFunc() {
+                            $('.loca.latinAmerica >ul >li.locaChild').slideToggle();
+                        }
+                        //Europe
+                        $('.loca.europe').on('click', europeChildFunc);
+
+                        function europeChildFunc() {
+                            $('.loca.europe >ul >li.locaChild').slideToggle();
+                        }
+                        //Eurasia
+                        $('.loca.eurasia').on('click', eurasiaChildFunc);
+
+                        function eurasiaChildFunc() {
+                            $('.loca.eurasia >ul >li.locaChild').slideToggle();
+                        }
+                        //Africa
+                        $('.loca.africa').on('click', africaChildFunc);
+
+                        function africaChildFunc() {
+                            $('.loca.africa >ul >li.locaChild').slideToggle();
+                        }
+                        //Asia
+                        $('.loca.asia').on('click', asiaChildFunc);
+
+                        function asiaChildFunc() {
+                            $('.loca.asia >ul >li.locaChild').slideToggle();
+                        }
+
+                        //Cloase 클릭 -> popmenu사라지게
+                        $('span.locaClose').on('click', locaCloseFunc);
+
+                        function locaCloseFunc() {
+                            $('.locationPop').css({
+                                'display': 'none'
+                            })
+                            $('.inner-locationPop').animate({
+                                'left': '-100%'
+                            });
+                        }
+                    </script>
+
+
+                    <div class="rightMenu">
+                        <div class="login">
+                            <a href="login.html"><img src="img/commons/header/gnb_login.png" alt="gnb_login" title="로그인"></a>
+                        </div>
+                        <div class="search">
+                            <img src="img/commons/header/gnb_search.png" alt="search" title="검색">
+                        </div>
+                        <div class="searchPop">
+                            <div class="inner-searchPop">
+                                <span class="searchClose">X</span>
+                                <div class="search-area">
+                                    <ul>
+                                        <li>
+                                            <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
+                                        </li>
+                                        <li>
+                                            <input type="button" value="Search">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--search popup menu-->
+                        <script>
+                            //search Icon 클릭 -> popmenu나타내기
+                            $('.search>img').on('click', searchPopFunc);
+
+                            function searchPopFunc() {
+                                $('.searchPop').fadeIn();
+                            }
+                            //Cloase 클릭 -> popmenu사라지게
+                            $('span.searchClose').on('click', searchCloseFunc);
+
+                            function searchCloseFunc() {
+                                $('.searchPop').fadeOut();
+                            }
+                        </script>
+
+                    </div>
+                </div>
+                <div class="middleMenu">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/commons/header/gnb_logo.png" alt="gnb-logo"></a>
+                    </div>
+                </div>
+                <div class="bottomMenu">
+                    <div class="inner-gnb">
+                        <div class="gnb">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">브랜드</a></li>
+                                <li><a href="#">스토리</a></li>
+                                <li><a href="#">라이프</a></li>
+                                <li><a href="#">커뮤니티</a></li>
+                            </ul>
+                        </div>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="#">SINCE 1866</a></li>
+                                <li><a href="#">코카콜라 코리아</a></li>
+                                <li><a href="#">사회공헌</a></li>
+                                <li><a href="#">코카콜라 저니</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">음료소개</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">코-크 스토리</a></li>
+                                <li><a href="#">글로벌 스토리</a></li>
+                                <li><a href="#">코-크 앰버서더</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">코-크 라이프</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">이미지갤러리</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var gnbLi = $('.gnb>ul>li');
+
+                    gnbLi.on('mouseenter', subShowFunc);
+
+                    function subShowFunc() {
+                        $('.subMenu').slideDown();
+                    }
+
+                    $('.inner-gnb').on('mouseleave', subHideFunc);
+
+                    function subHideFunc() {
+                        $('.subMenu').stop().slideUp();
+                    }
+
+
+                    var subUl = $('.subMenu>ul');
+                    //1.회사소개 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(0).hover(
+                        function() {
+                            gnbLi.eq(0).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(0).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(0).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(0).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //2. 브랜드 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(1).hover(
+                        function() {
+                            gnbLi.eq(1).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(1).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(1).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(1).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //3. 스토리 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(2).hover(
+                        function() {
+                            gnbLi.eq(2).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(2).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(2).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(2).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //4. 라이프 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(3).hover(
+                        function() {
+                            gnbLi.eq(3).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(3).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(3).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(3).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                    //5. 커뮤니티 : subMenu hover 시 mainGnb hover 상태
+                    subUl.eq(4).hover(
+                        function() {
+                            gnbLi.eq(4).css({
+                                'background': '#e61d2a'
+                            });
+                            $('.gnb>ul>li a').eq(4).css({
+                                'font-weight': 'bold',
+                                'color': '#fff'
+                            });
+                        },
+                        function() {
+                            gnbLi.eq(4).css({
+                                'background': '#fff'
+                            });
+                            $('.gnb>ul>li a').eq(4).css({
+                                'font-weight': 'normal',
+                                'color': '#000'
+                            });
+                        }
+                    );
+                </script>
+            </div>
+
+            <div class="scroll-header">
+                <div class="inner-scroll-header">
+                    <div class="sGnb">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/commons/header/gnb_logo.png" alt="logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">회사소개</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="">SINCE 1866</a></li>
+                                        <li><a href="#">코카콜라 코리아</a></li>
+                                        <li><a href="#">사회공헌</a></li>
+                                        <li><a href="#">코카콜라 저니</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">브랜드</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="">음료소개</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">스토리</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="#">코-크 스토리</a></li>
+                                        <li><a href="#">글로벌 스토리</a></li>
+                                        <li><a href="#">코-크 앰버서더</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">라이프</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="#">코-크 라이프</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">커뮤니티</a>
+                                <div class="sub">
+                                    <ul>
+                                        <li><a href="#">보도자료</a></li>
+                                        <li><a href="#">이벤트</a></li>
+                                        <li><a href="#">이미지갤러리</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/commons/header/gnb_login.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/commons/header/gnb_search.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+                $(window).on('scroll', scrollFunc);
+
+                function scrollFunc() {
+                    var docScrollTop = $(document).scrollTop();
+                    if (docScrollTop > 300) {
+
+                        $('.inner-header').css({
+                            'display': 'none'
+                        });
+                        $('.scroll-header').fadeIn();
+
+                    } else if (docScrollTop <= 200) {
+
+                        $('.scroll-header').fadeOut(0);
+                        $('.inner-header').css({
+                            'display': 'block'
+                        });
+
+                    }
+                }
+
+                var sGnbLi = $('.sGnb>ul>li');
+
+                for (var i = 1; i < sGnbLi.length - 2; i++) {
+                    sGnbLi.eq(i).on('mouseenter', sGnbEnterFunc);
+
+                    function sGnbEnterFunc() {
+                        $('.sub').stop().slideDown();
+                        $('.inner-scroll-header').animate({
+                            height: '270px'
+                        });
+                    }
+                }
+
+                $('.sub').on('mouseleave', sGnbLeaveFunc);
+
+                function sGnbLeaveFunc() {
+                    $('.sub').stop().slideUp();
+                    $('.inner-scroll-header').animate({
+                        height: '70px'
+                    });
+                }
+            </script>
+        </div>
+        <div class="contents">
+            <div class="inner-con">
+                <div class="login">
+                    <span class="title">"welcome"</span>
+                    <p class="subTitle">coca-cola KOREA</p>
+                    <div class="login-sec1">
+                        <div class="memLogin">
+                            <span class="memline"></span>
+                            <form action="loginOk.do" method="post" id="loginForm">
+                                <ul>
+                                    <li>일반회원로그인</li>
+                                    <li>
+                                        <input type="text" name="mUserId" placeholder="이메일"></li>
+                                    <li>
+                                        <input type="password" name="mUserPw" placeholder="비밀번호"></li>
+                                    <li>
+                                        <input type="radio" name="saveId" id="saveId">
+                                        <span class="loginText1">아이디저장</span>
+                                        <div><span class="loginText2"><a href="#">아이디/비밀번호찾기</a></span></div>
+                                    </li>
+                                    <li>
+                                        <input type="button" value="일반회원 로그인" id="loginOk">
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <script>
+                            var loginOk = document.querySelector('#loginOk');
+                            var loginForm = document.querySelector('#loginForm');
+                            loginOk.addEventListener('click', loginOkFunc);
+
+                            function loginOkFunc() {
+                                var mUserId = document.getElementsByName('mUserId')[0];
+                                var mUserPw = document.getElementsByName('mUserPw')[0];
+
+                                if (mUserId.value == '' || mUserId.value == null || mUserId.value.length < 10) {
+                                    alert('이메일 주소 (아이디) 입력오류!');
+                                    mUserId.focus();
+                                    return false;
+                                }
+                                if ((mUserId.value).indexOf('@') == -1) {
+                                    alert('이메일 주소 (아이디) 형식이 아닙니다!');
+                                    mUserId.focus();
+                                    return false;
+                                }
+                                if (mUserPw.value == '' || mUserPw.value == null || mUserPw.value.length < 5) {
+                                    alert('비밀번호입력오류!');
+                                    mUserPw.focus();
+                                    return false;
+                                }
+                                //만약 아이디가 abc1111@naver.com 일 때, 비밀번호가 a123456이 아니면
+                                if ((mUserId.value == 'abc1111@naver.com') && (mUserPw.value != 'a123456')) {
+                                    alert('아이디와 비밀번호가 맞지않습니다.');
+                                    mUserId.focus();
+                                    return false;
+                                }
+                                alert('로그인 성공!');
+                                loginForm.submit();
+                            }
+                        </script>
+                        <div class="nonmemLogin">
+                            <form action="noMemLoginOk.do" method="post" id="noMemLoginForm">
+                                <ul>
+                                    <li>비회원 로그인</li>
+                                    <li>
+                                        <input type="text" name="nUserName" placeholder="이름"></li>
+                                    <li>
+                                        <input type="text" name="nUserPhone" placeholder="휴대폰번호 (-포함)"></li>
+                                    <li>
+                                        <input type="text" name="pNum" placeholder="인증번호입력">
+                                        <span class="loginTime">05:00</span>
+                                        <a href="#none" class="phoneCheckBtn">인증받기</a>
+                                    </li>
+                                    <li>
+                                        <input type="button" value="비회원 로그인" id="noMemLoginOk">
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <script>
+                            var noMemLoginOk = document.querySelector('#noMemLoginOk');
+                            var noMemLoginForm = document.querySelector('#noMemLoginForm');
+                            
+                            noMemLoginOk.addEventListener('click', noMemLoginOkFunc);
+                            function noMemLoginOkFunc() {
+                                var nUserName = document.getElementsByName('nUserName')[0];
+                                var nUserPhone = document.getElementsByName('nUserPhone')[0];
+                                var pNum = document.getElementsByName('pNum')[0];
+                                
+
+                                if (nUserName.value == '' || nUserName.value == null || nUserName.value.length < 2) {
+                                    alert('이름 입력오류!');
+                                    nUserName.focus();
+                                    return false;
+                                }
+                                if (nUserPhone.value == '' || nUserPhone.value == null || nUserPhone.value.length < 11) {
+                                    alert('휴대폰 번호 입력오류!');
+                                    nUserPhone.focus();
+                                    return false;
+                                }
+                                if ((nUserPhone.value).indexOf('-') == -1) {
+                                    alert('휴대폰 번호 형식이 아닙니다!');
+                                    nUserPhone.focus();
+                                    return false;
+                                }
+                                if (pNum.value == '' || pNum.value == null || pNum.value.length < 4) {
+                                    alert('인증번호 입력오류!!');
+                                    pNum.focus();
+                                    return false;
+                                }
+                                alert('로그인 성공!');
+                                loginForm.submit();
+                            }
+                        </script>
+                    </div>
+                    <div class="login-sec2">
+                        <div class="inner-sec">
+                            <div class="inner-sec-title">
+                                <span class="line">아</span>직 코카-콜라 코리아의<br>
+                                회원이 아니신가요?
+                            </div>
+                            <div class="inner-sec-join">
+                                <span>지금 회원가입을 하시면 코카-콜라 코리아의 다향한 이벤트 및<br>프로모션에 참여가 가능하며 정기 뉴스레터를 받으실 수 있습니다.</span>
+                                <input type="button" value="코카-콜라 코리아 회원가입" onclick="joinGo()">
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        function joinGo(){
+                            location.href='join.html';
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="inner-foot">
+                <div class="topFoot">
+                    <div class="footMenu">
+                        <ul>
+                            <li><a href="#">오시는 길</a></li>
+                            <li class="list">|</li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li class="list">|</li>
+                            <li><a href="#">1:1문의하기</a></li>
+                            <li class="list">|</li>
+                            <li class="location-icon"><a href="#"><img src="img/commons/footer/footer_location.png" alt="footer_location"></a></li>
+                        </ul>
+                    </div>
+                    <div class="middleFoot">
+                        <div class="info">
+                            <div class="add">
+                                서울시 종로구 새문안로 68 흥국생명빌딩 10층 한국 코카-콜라<br>고객센터 : 080-024-5999 (월~금 09:00 ~ 18:00)
+                            </div>
+                            <div class="sns">
+                                <ul>
+                                    <li class="sns-face">
+                                        <a href="https://www.facebook.com/Coca-Cola" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_facebook.png" alt="footer_sns_facebook"></a>
+                                    </li>
+                                    <li class="sns-in">
+                                        <a href="https://www.instagram.com/coke.style/" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_instagram01.png" alt="footer_sns_instagram01">
+                                        </a>
+                                    </li>
+                                    <li class="sns-you">
+                                        <a href="https://www.youtube.com/user/openhappinesskorea" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_youtube.png" alt="footer_sns_youtube">
+                                        </a>
+                                    </li>
+                                    <li class="sns-twi">
+                                        <a href="https://twitter.com/CocaCola_Korea" target="_blank">
+                                            <img src="img/commons/footer/footer_sns_twitter.png" alt="footer_sns_twitter">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomFoot">
+                    <span class="footer-line"></span>
+                    <div class="inner-bFoot">
+                        <div class="logo"><img src="img/commons/footer/footer_logo.png" alt="footer_logo"></div>
+                        <div class="copyright">Copyright 2020 @ Coca-Cola KOREA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body></html>
