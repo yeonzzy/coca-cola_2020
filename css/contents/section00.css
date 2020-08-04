@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/*contents : section 0 부분*/
+.contents .section00{
+    width: 100%;
+    height: auto;
+/*    position: relative;*/
+}
+
+.contents .section00::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contents .section00 .s0-text {
+    width: 50%;
+    height: auto;
+    float: left;
+    text-align: right;
+    margin-top: 50px;
+}
+
+.contents .section00 .s0-text::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contents .section00 .s0-text >h1{
+    padding-right: 20px;
+    font-weight: 700;
+    font-family:'Noto Sans', sans-serif;
+}
+
+.contents .section00 .s0-text >span{
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 100;
+    display: block;
+}
+
+.contents .section00 .s0-text >h6{
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 60px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #bfbfbf;
+}
+
+.contents .section00 .s0-text >h6 a{
+    color: #bfbfbf;
+}
+
+.contents .section00 .s0-text >h6 a:hover{
+/*    font-weight: bold;*/
+    color:#161616;
+    -webkit-transition: 0.5s;
+    box-shadow: 0 3px 0 #e11425;
+}
+
+.contents .section00 .s0-img{
+    width: 50%;
+    height: 350px;
+    float: right;
+    background: url(../../img/contents/section00/sec0_img.gif) no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+    position: relative;
+    top: -40px;
+    right: 0;
+}

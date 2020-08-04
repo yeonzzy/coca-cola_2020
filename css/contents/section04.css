@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/*contents : section 4 부분*/
+.contents .section04{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+}
+
+.contents .section04 .inner-sec4{
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.contents .section04 .inner-sec4 hr.sec4-line{
+    width: 20px;
+    border-color: #161616;
+    border: 1px solid;
+    position: relative;
+    margin: 0 auto;
+}
+
+.contents .section04 .inner-sec4 .sec4Title{
+    width: 100%;
+    height: auto;
+/*    border: 1px solid;*/
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contents .section04 .inner-sec4 .sec4Title >span.eventText{
+    font-size: 13px;
+    font-weight: 500;
+    color: #7e7e7e;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns{
+    width: 100%;
+    max-width: 200px;
+    height: 33px;
+    margin: 0 auto;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li{
+    width: 25%;
+    height: 33px;
+    float: left;
+    box-sizing: border-box;
+    padding:0 8px;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li >span{
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-face >span{
+    background: url(../../img/contents/section04/sec04_eventSns-face.png) no-repeat;
+    cursor: pointer;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-face >span:hover{
+    background: url(../../img/contents/section04/sec04_eventSns-face_hover.png) no-repeat;
+    transition: 0.5s;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-ins >span{
+    background: url(../../img/contents/section04/sec04_eventSns-ins.png) no-repeat;
+    cursor: pointer;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-ins >span:hover{
+    background: url(../../img/contents/section04/sec04_eventSns-ins-hover.png) no-repeat;
+    transition: 0.5s;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-you >span{
+    background: url(../../img/contents/section04/sec04_eventSns-you.png) no-repeat;
+    cursor: pointer;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-you>span:hover{
+    background: url(../../img/contents/section04/sec04_eventSns-you-hover.png) no-repeat;
+    transition: 0.5s;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-twi >span{
+    background: url(../../img/contents/section04/sec04_eventSns-twi.png) no-repeat;
+    cursor: pointer;
+}
+
+.contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-twi>span:hover{
+    background: url(../../img/contents/section04/sec04_eventSns-twi-hover.png) no-repeat;
+    transition: 0.5s;
+}
+
+.contents .section04 .inner-sec4 .sec4-event{
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event .eventGallery{
+    width: 100%;
+    max-width: 1920px;
+    height: 400px;
+    position: absolute;
+    
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event .eventGallery::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event .eventGallery >ul >li{
+    width: 19%;
+    height: 400px;
+    margin: 0 0.5% 0 0.5%;
+    float: left;
+    box-sizing: border-box;
+    opacity: 0.4;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event .eventGallery >ul >li >a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event .eventGallery >ul >li:hover{
+    cursor: pointer;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event span.arrow{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 400px;
+    background: #f2f2f2;
+    top: 0;
+    
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event span.arrow img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -15px;
+    position: absolute;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event span.arrow.left{
+    left: 0px;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event span.arrow.left img{
+    right: -15px;
+    z-index: 5;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event span.arrow.right{
+    right: 0;
+}
+
+.contents .section04 .inner-sec4 .sec4-event .inner-sec4-event span.arrow.right img{
+    left: -15px;
+    z-index: 5;
+}
+
+.on2{
+    border: 5px solid #fff !important;
+    background: #00f;
+    transition: all 0.7s;
+    opacity: 1 !important;
+    transform: scale(1.05);
+}
+
+.on2:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}

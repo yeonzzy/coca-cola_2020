@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/*contents : nav 부분*/
+.contents .inner-con .nav{
+    width: 100%;
+    height: 950px;
+    background: url(../../img/contents/nav/index_nav_bg.jpg) no-repeat ;
+    background-position: 50% 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contents .inner-con .nav .navTitle{
+    height: auto;
+    color: #fff;
+    position: absolute;
+    top:70%;
+    margin-left: 70px;
+    font-size: 20px;
+    font-weight:300;
+    line-height: 20px;
+    z-index: 10;
+}
+
+.contents .inner-con .nav .navTitle >span.nTitlt01{
+    font-size: 40px;
+    font-weight:100;
+    line-height: 70px;
+}
+
+.contents .inner-con .nav .navTitle >span.nTitle02{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.contents .inner-con .nav .navTitle >hr{
+    top: 6%;
+    width: 60px;
+    margin-left: 130px;
+    border: 0.5px solid;
+    border-color:#fff;
+    position: absolute;
+}

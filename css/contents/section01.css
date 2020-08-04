@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/*contents : section 1 부분*/
+.contents .section01{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+    margin-bottom: 50px;
+}
+
+.contents .section01 .inner-sec1{
+    width: 100%;
+    max-width: 1400px;
+    height: 609px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.contents .section01 .inner-sec1::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.contents .section01 .inner-sec1 hr.sec1-line{
+    width: 20px;
+    border-color: #161616;
+    border: 1px solid;
+    margin: 0 auto;
+}
+
+.contents .section01 .inner-sec1 .sec1Title{
+    width: 100%;
+    text-align: center;
+}
+
+h1.secTitle{
+    font-family:'Noto Sans', sans-serif;
+}
+
+.contents .section01 .inner-sec1 .sec1Title >span.sinceText{
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7e7e;
+    line-height: 11px;
+}
+
+.contents .section01 .inner-sec1 .sec1Since::after{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+
+/*contents : section 1 - Since 부분*/
+.contents .section01 .inner-sec1 .sec1Since{
+    width: 100%;
+    height: auto;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since{
+    width: 100%;
+    max-width: 100px;
+    height: 500px;
+    position: absolute;
+    z-index: 10;
+    margin-top: -30px
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .spanList{
+    width: 50px;
+    height: 500px;
+    float: left;
+    cursor: pointer;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .spanList span.list{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #bfbfbf;
+    background: #bfbfbf;
+    border-radius: 50%;
+    margin: 85px 20px 0;
+    box-sizing: border-box;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince{
+    width: 50px;
+    height: 500px;
+    float: left;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince p{
+    display: block;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince p:nth-child(1){
+    margin-top: 80px;
+}
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince p:nth-child(2){
+    margin-top: 76px;
+}
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince p:nth-child(3){
+    margin-top: 78px;
+}
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince p:nth-child(4){
+    margin-top: 76px;
+}
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .pSince p:nth-child(5){
+    margin-top: 78px;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since .slide-bar{
+    width: 4px;
+    height: 0;
+    background: #e11425;
+    position: absolute;
+    z-index: -10;
+    left: 23px;
+    top: 90px;
+}
+
+.contents .section01 .inner-sec1 .sec1Since .inner-sec1Since span.slide-bar-bg{
+    display: block;
+    width: 2px;
+    height: 385px;
+    background: #bfbfbf;
+    position: absolute;
+    z-index: -10;
+    left: 24px;
+    top: 90px;
+}
+
+.on{
+    background: #e11425 !important;
+    border: 1px solid #e11425 !important;
+    transition: all 1.0s;
+    box-shadow: 2px 2px 5px #ff8282 !important;
+}
+
+
+/*contents : section 1 - Slide 부분*/
+.contents .section01 .inner-sec1 .sec1Main{
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    position: relative;
+    margin: 20px auto;
+}
+
+.contents .section01 .inner-sec1 .sec1Main >ul >li{
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.contents .section01 .inner-sec1 .sec1Main >ul >li .sec1-Brand{
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -112px;
+}
+.contents .section01 .inner-sec1 .sec1Main >ul >li .sec1-Brand img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.contents .section01 .inner-sec1 .sec1Main >ul >li span.sec1Text{
+    display: block;
+    width: 546px;
+    height: 242px;
+    color: #7e7e7e;
+    font-weight: bold;
+    font-size: 180px;
+    position: absolute;
+    left: 50%;
+    margin-left: -273px;
+    top: 100px;
+    text-shadow: 5px 5px 0 #bfbfbf;
+}
+
+.contents .section01 .inner-sec1 .sec1Main >ul >li span.sec1Text:hover{
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -webkit-transition: 1.0s;
+    color: #161616;
+}
