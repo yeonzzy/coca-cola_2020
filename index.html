@@ -18,6 +18,7 @@
                     <div class="location">
                         <img src="img/commons/header/gnb_location.png" alt="gnb-location">
                     </div>
+                    <!--location popup menu-->
                     <div class="locationPop">
                         <div class="inner-locationPop">
                             <span class="locaClose">X</span>
@@ -87,110 +88,10 @@
 
                         </div>
                     </div>
-                    <!--location popup menu-->
-                    <script>
-                        //location Icon 클릭 -> popmenu나타내기
-                        $('.location').on('click', locaPopFunc);
-
-                        function locaPopFunc() {
-                            $('.locationPop').css({
-                                'display': 'block'
-                            })
-                            $('.inner-locationPop').animate({
-                                'left': '0'
-                            });
-                        }
-                        //location Title 클릭 -> >ul>li 나타내기
-                        //North America
-                        $('.loca.northAmerica').on('click', northChildFunc);
-
-                        function northChildFunc() {
-                            $('.loca.northAmerica >ul >li.locaChild').slideToggle();
-                        }
-                        //Latin America
-                        $('.loca.latinAmerica').on('click', latinChildFunc);
-
-                        function latinChildFunc() {
-                            $('.loca.latinAmerica >ul >li.locaChild').slideToggle();
-                        }
-                        //Europe
-                        $('.loca.europe').on('click', europeChildFunc);
-
-                        function europeChildFunc() {
-                            $('.loca.europe >ul >li.locaChild').slideToggle();
-                        }
-                        //Eurasia
-                        $('.loca.eurasia').on('click', eurasiaChildFunc);
-
-                        function eurasiaChildFunc() {
-                            $('.loca.eurasia >ul >li.locaChild').slideToggle();
-                        }
-                        //Africa
-                        $('.loca.africa').on('click', africaChildFunc);
-
-                        function africaChildFunc() {
-                            $('.loca.africa >ul >li.locaChild').slideToggle();
-                        }
-                        //Asia
-                        $('.loca.asia').on('click', asiaChildFunc);
-
-                        function asiaChildFunc() {
-                            $('.loca.asia >ul >li.locaChild').slideToggle();
-                        }
-
-                        //Cloase 클릭 -> popmenu사라지게
-                        $('span.locaClose').on('click', locaCloseFunc);
-
-                        function locaCloseFunc() {
-                            $('.locationPop').css({
-                                'display': 'none'
-                            })
-                            $('.inner-locationPop').animate({
-                                'left': '-100%'
-                            });
-                        }
-                    </script>
-
-
-                    <div class="rightMenu">
-                        <div class="login">
+                    <script type="text/javascript" src="js/commons/header/topmenu-location.js"></script>
+                    <div class="login">
                             <a href="login.html"><img src="img/commons/header/gnb_login.png" alt="gnb_login" title="로그인"></a>
                         </div>
-                        <div class="search">
-                            <img src="img/commons/header/gnb_search.png" alt="search" title="검색">
-                        </div>
-                        <div class="searchPop">
-                            <div class="inner-searchPop">
-                                <span class="searchClose">X</span>
-                                <div class="search-area">
-                                    <ul>
-                                        <li>
-                                            <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
-                                        </li>
-                                        <li>
-                                            <input type="button" value="Search">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--search popup menu-->
-                        <script>
-                            //search Icon 클릭 -> popmenu나타내기
-                            $('.search>img').on('click', searchPopFunc);
-
-                            function searchPopFunc() {
-                                $('.searchPop').fadeIn();
-                            }
-                            //Cloase 클릭 -> popmenu사라지게
-                            $('span.searchClose').on('click', searchCloseFunc);
-
-                            function searchCloseFunc() {
-                                $('.searchPop').fadeOut();
-                            }
-                        </script>
-
-                    </div>
                 </div>
                 <div class="middleMenu">
                     <div class="logo">
@@ -234,131 +135,8 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    var gnbLi = $('.gnb>ul>li');
-
-                    gnbLi.on('mouseenter', subShowFunc);
-
-                    function subShowFunc() {
-                        $('.subMenu').slideDown();
-                    }
-
-                    $('.inner-gnb').on('mouseleave', subHideFunc);
-
-                    function subHideFunc() {
-                        $('.subMenu').stop().slideUp();
-                    }
-
-
-                    var subUl = $('.subMenu>ul');
-                    //1.회사소개 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(0).hover(
-                        function() {
-                            gnbLi.eq(0).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(0).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(0).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(0).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //2. 브랜드 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(1).hover(
-                        function() {
-                            gnbLi.eq(1).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(1).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(1).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(1).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //3. 스토리 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(2).hover(
-                        function() {
-                            gnbLi.eq(2).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(2).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(2).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(2).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //4. 라이프 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(3).hover(
-                        function() {
-                            gnbLi.eq(3).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(3).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(3).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(3).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //5. 커뮤니티 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(4).hover(
-                        function() {
-                            gnbLi.eq(4).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(4).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(4).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(4).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                </script>
             </div>
-
+            <!--scroll-header-->
             <div class="scroll-header">
                 <div class="inner-scroll-header">
                     <div class="sGnb">
@@ -420,60 +198,12 @@
                                     <img src="img/commons/header/gnb_login.png" alt="">
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/commons/header/gnb_search.png" alt="">
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
-            <script>
-                $(window).on('scroll', scrollFunc);
-
-                function scrollFunc() {
-                    var docScrollTop = $(document).scrollTop();
-                    if (docScrollTop > 300) {
-
-                        $('.inner-header').css({
-                            'display': 'none'
-                        });
-                        $('.scroll-header').fadeIn();
-
-                    } else if (docScrollTop <= 200) {
-
-                        $('.scroll-header').fadeOut(0);
-                        $('.inner-header').css({
-                            'display': 'block'
-                        });
-
-                    }
-                }
-
-                var sGnbLi = $('.sGnb>ul>li');
-                
-                for(var i=1; i<sGnbLi.length-2; i++){
-                    sGnbLi.eq(i).on('mouseenter', sGnbEnterFunc);
-                    function sGnbEnterFunc() {
-                    $('.sub').stop().slideDown();
-                    $('.inner-scroll-header').animate({
-                        height: '270px'
-                    });
-                    }
-                }
-
-                $('.sub').on('mouseleave', sGnbLeaveFunc);
-
-                function sGnbLeaveFunc() {
-                    $('.sub').stop().slideUp();
-                    $('.inner-scroll-header').animate({
-                        height: '70px'
-                    });
-                }
-            </script>
         </div>
+        <script type="text/javascript" src="js/commons/header/bottomMenu-gnb.js"></script>
         <div class="contents">
             <div class="inner-con">
                 <!--background-attachment-->
@@ -492,7 +222,7 @@
                         <span>글로벌 종합 음료회사, 코카-콜라는 전 세계 200개국 이상에 진출했으며<br>탄산 · 스포츠음료 · 생수 · 주스 · 커피 등 총 500개 이상의 브랜드<br>4,100여 가지 종류의 제품을 보유하고 있다.<br></span>
                         <h6><a href="#">more></a></h6>
                     </div>
-                    <div class="s0-img"> </div>
+                    <div class="s0-img"></div>
                 </div>
                 <!--SINCE1866:slide-->
                 <div class="section01">
@@ -527,84 +257,38 @@
                                 <li>
                                     <span class="sec1Text">19&nbsp;&nbsp;68</span>
                                     <div class="sec1-Brand">
-                                        <img src="img/sec01_cola.png" alt="sec1-Coke">
+                                        <img src="img/contents/section01/sec01_cola.png" alt="sec1-Coke">
                                     </div>
                                 </li>
                                 <li>
                                     <span class="sec1Text">19&nbsp;&nbsp;76</span>
                                     <div class="sec1-Brand">
-                                        <img src="img/sec01_sunnyten.png" alt="sec1-sunnyten">
+                                        <img src="img/contents/section01/sec01_sunnyten.png" alt="sec1-sunnyten">
                                     </div>
                                 </li>
                                 <li>
                                     <span class="sec1Text">19&nbsp;&nbsp;84</span>
                                     <div class="sec1-Brand">
-                                        <img src="img/sec01_ambasa.png" alt="sec1-ambasa">
+                                        <img src="img/contents/section01/sec01_ambasa.png" alt="sec1-ambasa">
                                     </div>
                                 </li>
                                 <li>
                                     <span class="sec1Text">19&nbsp;&nbsp;92</span>
                                     <div class="sec1-Brand">
-                                        <img src="img/sec01_sprite.png" alt="sec1-sprite">
+                                        <img src="img/contents/section01/sec01_sprite.png" alt="sec1-sprite">
                                     </div>
                                 </li>
                                 <li>
                                     <span class="sec1Text">19&nbsp;&nbsp;94</span>
                                     <div class="sec1-Brand">
-                                        <img src="img/sec01_powerade.png" alt="sec1-powerade">
+                                        <img src="img/contents/section01/sec01_powerade.png" alt="sec1-powerade">
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <script>
-                    var key = 0;
-                    var sec1Li = $('.sec1Main>ul>li');
-                    var spanList = $('.spanList span.list');
-
-                    sec1Li.eq(0).show().siblings().hide();
-                    //AutoSlide : Brand
-                    function fadeAutoSlide() {
-                        key++;
-                        //key가 0일 때,
-                        if (key == 0) {
-                            //spanList(key)에 'on'클래스, 나머지는 'on'클래스 제거
-                            spanList.eq(key).addClass('on').siblings().removeClass('on')
-                        }
-                        //sec1>ul>li는 key값에 따라 fadein, fadeout
-                        sec1Li.eq(key).fadeIn(1000).siblings().fadeOut(1000);
-
-                        //96.25px씩 key값에 따라 증가 -> goBar 저장
-                        var goBar = (key * 96.25);
-                        //좌측 슬라이드바의 높이는 gobar에 의해 늘어나고
-                        $('.slide-bar').stop().delay().animate({
-                            height: goBar
-                        }, 800, function() {
-                            //list는 key값에 따라 'on'클래스를 줌.
-                            $('span.list').eq(key).addClass('on');
-                        });
-                        //sec1>ul>li의 길이 -1 이 key값보다 같거나 클 때 AND goBar의 높이가 385보다 같거나 클 때
-                        if (key >= sec1Li.length - 1 && goBar >= 385) {
-                            //key값은 -1로 초기화
-                            key = -1;
-                            return false;
-                        }
-
-                    } //5초마다 AutoSlide 함수 진행.
-                    var setIn = setInterval(fadeAutoSlide, 5000);
-
-                    //hover시 자동갤러리 Stop,Start 제어
-                    var brandSince = $('.sec1Main>ul>li span.sec1Text');
-                    brandSince.hover(
-                        function() {
-                            clearInterval(setIn);
-                        },
-                        function() {
-                            setIn = setInterval(fadeAutoSlide, 3000);
-                        }
-                    );
-                </script>
+                <script type="text/javascript" src="js/contents/section01.js"></script>
 
                 <!--Brand:slide-->
                 <div class="section02">
@@ -628,177 +312,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--items>ul>li 이미지넣기-->
-                    <!--items>ul>li hover효과넣기-->
-                    <script>
-                        var itemsLi = $('.items>ul>li');
-                        var itemsBgArr = [];
-                        for (var i = 0; i < itemsLi.length; i++) {
-                            itemsBgArr.push('url(img/sec02_items0' + i + '.png) no-repeat 50%');
-                            itemsLi.eq(i).css({
-                                'background': itemsBgArr[i]
-                            });
-                        }
-
-                        var arrowLeft = $('span.slideArrow.left');
-                        var arrowRight = $('span.slideArrow.right');
-
-                        arrowLeft.on('click', arrowLeftFunc);
-
-                        function arrowLeftFunc() {
-                            var itemsLi = $('.items>ul>li');
-                            $('.items>ul').append(itemsLi.eq(0));
-
-                        }
-                        arrowRight.on('click', arrowRightFunc);
-
-                        function arrowRightFunc() {
-                            var itemsLi = $('.items>ul>li');
-                            $('.items>ul').prepend(itemsLi.last());
-                        }
-
-                        //cola hover
-                        itemsLi.eq(0).hover(
-                            function() {
-                                itemsLi.eq(0).css({
-                                    'background': 'url(img/sec02_items00-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(0).css({
-                                    'background': 'url(img/sec02_items00.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //sprite hover
-                        itemsLi.eq(1).hover(
-                            function() {
-                                itemsLi.eq(1).css({
-                                    'background': 'url(img/sec02_items01-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(1).css({
-                                    'background': 'url(img/sec02_items01.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //fanta hover
-                        itemsLi.eq(2).hover(
-                            function() {
-                                itemsLi.eq(2).css({
-                                    'background': 'url(img/sec02_items02-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(2).css({
-                                    'background': 'url(img/sec02_items02.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //powerade hover
-                        itemsLi.eq(3).hover(
-                            function() {
-                                itemsLi.eq(3).css({
-                                    'background': 'url(img/sec02_items03-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(3).css({
-                                    'background': 'url(img/sec02_items03.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //minutemaid hover
-                        itemsLi.eq(4).hover(
-                            function() {
-                                itemsLi.eq(4).css({
-                                    'background': 'url(img/sec02_items04-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(4).css({
-                                    'background': 'url(img/sec02_items04.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //georgia hover
-                        itemsLi.eq(5).hover(
-                            function() {
-                                itemsLi.eq(5).css({
-                                    'background': 'url(img/sec02_items05-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(5).css({
-                                    'background': 'url(img/sec02_items05.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //toreta hover
-                        itemsLi.eq(6).hover(
-                            function() {
-                                itemsLi.eq(6).css({
-                                    'background': 'url(img/sec02_items06-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(6).css({
-                                    'background': 'url(img/sec02_items06.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //vitaminWater hover
-                        itemsLi.eq(7).hover(
-                            function() {
-                                itemsLi.eq(7).css({
-                                    'background': 'url(img/sec02_items07-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(7).css({
-                                    'background': 'url(img/sec02_items07.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //sunneyTen hover
-                        itemsLi.eq(8).hover(
-                            function() {
-                                itemsLi.eq(8).css({
-                                    'background': 'url(img/sec02_items08-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(8).css({
-                                    'background': 'url(img/sec02_items08.png) no-repeat 50%'
-                                });
-                            }
-                        );
-
-                        //seagram hover
-                        itemsLi.eq(9).hover(
-                            function() {
-                                itemsLi.eq(9).css({
-                                    'background': 'url(img/sec02_items09-h.png) no-repeat 50%'
-                                });
-                            },
-                            function() {
-                                itemsLi.eq(9).css({
-                                    'background': 'url(img/sec02_items09.png) no-repeat 50%'
-                                });
-                            }
-                        );
-                    </script>
-
                 </div>
+                <script type="text/javascript" src="js/contents/section02.js"></script>
+
                 <!--joureyTV:youtube-->
                 <div class="section03">
                     <div class="inner-sec3">
@@ -843,77 +359,8 @@
                         </div>
                     </div>
                 </div>
-                <!--sec03 hover-->
-                <script>
-                    //sec03 : journey01 부분
-                    var title_Ahover1 = $('.journey01 >ul >li.j-title1 a');
-                    title_Ahover1.hover(
-                        function() {
-                            $('.journey01 >ul >li.j-title1').css({
-                                'background': '#e11425'
-                            });
-                            title_Ahover1.css({
-                                'color': '#fff',
-                                'text-decoration': 'underline'
-                            });
-                        },
-                        function() {
-                            $('.journey01 >ul >li.j-title1').css({
-                                'background': '#fff'
-                            });
-                            title_Ahover1.css({
-                                'color': '#161616',
-                                'text-decoration': 'none'
-                            });
-                        }
-                    );
+                <script type="text/javascript" src="js/contents/section03.js"></script>
 
-                    //sec03 : journey02 부분
-                    var title_Ahover2 = $('.journey02 >ul >li.j-title2 a');
-                    title_Ahover2.hover(
-                        function() {
-                            $('.journey02 >ul >li.j-title2').css({
-                                'background': '#e11425'
-                            });
-                            title_Ahover2.css({
-                                'color': '#fff',
-                                'text-decoration': 'underline'
-                            });
-                        },
-                        function() {
-                            $('.journey02 >ul >li.j-title2').css({
-                                'background': '#fff'
-                            });
-                            title_Ahover2.css({
-                                'color': '#161616',
-                                'text-decoration': 'none'
-                            });
-                        }
-                    );
-
-                    //sec03 : journey03 부분
-                    var title_Ahover3 = $('.journey03 >ul >li.j-title3 a');
-                    title_Ahover3.hover(
-                        function() {
-                            $('.journey03 >ul >li.j-title3').css({
-                                'background': '#e11425'
-                            });
-                            title_Ahover3.css({
-                                'color': '#fff',
-                                'text-decoration': 'underline'
-                            });
-                        },
-                        function() {
-                            $('.journey03 >ul >li.j-title3').css({
-                                'background': '#fff'
-                            });
-                            title_Ahover3.css({
-                                'color': '#161616',
-                                'text-decoration': 'none'
-                            });
-                        }
-                    );
-                </script>
                 <!--Event:slide-->
                 <div class="section04">
                     <div class="inner-sec4">
@@ -957,71 +404,16 @@
                                     </ul>
                                 </div>
                                 <span class="arrow left">
-                                    <img src="img/sec04-arrow-left-2.png" alt="sec04-arrow-left">
+                                    <img src="img/contents/section04/sec04-arrow-left-2.png" alt="sec04-arrow-left">
                                 </span>
                                 <span class="arrow right">
-                                    <img src="img/sec04-arrow-right-2.png" alt="sec04-arrow-right">
+                                    <img src="img/contents/section04/sec04-arrow-right-2.png" alt="sec04-arrow-right">
                                 </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <script>
-                    //윈도우 로드되면 eventGallery 실행.
-                    $(document).ready(function() {
-                        //배열로 배경넣기
-                        var eventGallLi = $('.eventGallery>ul>li');
-                        var gallBgArr = [];
-                        for (var i = 0; i < eventGallLi.length; i++) {
-                            gallBgArr.push('url(img/sec04-event-img0' + i + '.jpg) no-repeat 50%');
-                            eventGallLi.eq(i).css({
-                                'background': gallBgArr[i],
-                                'background-size': 'cover'
-                            });
-                        }
-                                //이벤트갤러리 함수 생성 :  append이용 -> 3초마다 append
-                        function eventGallery() {
-                            var eventGallLi = $('.eventGallery>ul>li');
-                            $('.eventGallery>ul').append(eventGallLi.eq(0));
-                            //항상 가운데에 on2클래스 나머지들은 on2클래스 제거
-                            //처음엔 eq(2)에 on2클래스 (0-1-2-3-4) : html
-                                        //append되면서 eq(3)이 eq(2)자리로 이동하므로,
-                                        //eq(3)에 on2클래스 나머지는 on2클래스 제거
-                            eventGallLi.eq(3).addClass('on2').siblings().removeClass('on2');
-                        }
-                        var timer = setInterval(eventGallery, 3500);
-                        
-                        //마우스 오버, 아웃 시 setInterval 제어
-                        var eventGallLi = $('.eventGallery>ul>li');
-                        eventGallLi.hover(
-                            function() {
-                                clearInterval(timer);
-                            },
-                            function() {
-                                timer = setInterval(eventGallery, 3000);
-                            }
-                        );
-                        //arrow img 클릭 시 이전-다음 제어
-                        //arrow left 클릭 시 이전으로 
-                        $('span.arrow.left img').on('click', prevFunc);
-                                //이전 : append 이용
-                        function prevFunc() {
-                            var eventGallLi = $('.eventGallery>ul>li');
-                            $('.eventGallery>ul').append(eventGallLi.eq(0));
-                            eventGallLi.eq(3).addClass('on2').siblings().removeClass('on2');
-                        }
-                        //arrow right 클릭 시 다음으로 
-                        $('span.arrow.right img').on('click', nextFunc);
-                                //다음 : prepend 이용
-                        function nextFunc() {
-                            var eventGallLi = $('.eventGallery>ul>li');
-                            $('.eventGallery>ul').prepend(eventGallLi.last());
-                                    //eq(1)이 prepend되면 eq(2)자리로 이동하므로,
-                                    //eq(1)에 'on2'클래스 나머지는 on2클래스 제거
-                            eventGallLi.eq(1).addClass('on2').siblings().removeClass('on2');
-                        }
-                    });
-                </script>
+                <script type="text/javascript" src="js/contents/section04.js"></script>
             </div>
         </div>
         <div class="footer">
