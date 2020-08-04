@@ -23,7 +23,7 @@
 .contents .inner-con .nav{
     width: 100%;
     height: 950px;
-    background: url(../img/index_nav_bg.jpg) no-repeat ;
+    background: url(../img/contents/nav/index_nav_bg.jpg) no-repeat ;
     background-position: 50% 0;
     background-size: cover;
     background-attachment: fixed;
@@ -128,7 +128,7 @@
     width: 50%;
     height: 350px;
     float: right;
-    background: url(../img/sec0_img.gif) no-repeat;
+    background: url(../img/contents/section00/sec0_img.gif) no-repeat;
     background-size: cover;
     background-position: 50% 0;
     position: relative;
@@ -365,14 +365,14 @@ h1.secTitle{
 }
 
 .contents .section02 .inner-sec2 span.slideArrow.left{
-    background-image: url(../img/sec02_slideArrow_left.png);
+    background-image: url(../img/contents/section02/sec02_slideArrow_left.png);
     background-repeat: no-repeat;
     background-size: cover;
     left: 0;
 }
 
 .contents .section02 .inner-sec2 span.slideArrow.right{
-    background-image: url(../img/sec02_slideArrow_right.png);
+    background-image: url(../img/contents/section02/sec02_slideArrow_right.png);
     background-repeat: no-repeat;
     background-size: cover;
     right: 0
@@ -497,13 +497,13 @@ h1.secTitle{
 .contents .section03 .inner-sec3 .sec3Contents .journey01 >ul >li.j-img1{
     width: 100%;
     height: 240px;
-    background: url(../img/sec03-journey-img01.jpg) no-repeat 50%;
+    background: url(../img/contents/section03/sec03-journey-img01.jpg) no-repeat 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .contents .section03 .inner-sec3 .sec3Contents .journey01 >ul >li.j-img1:hover{
-    background-image: url(../img/sec03-journey-img01_hover.jpg);
+    background-image: url(../img/contents/section03/sec03-journey-img01_hover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -544,13 +544,13 @@ h1.secTitle{
 .contents .section03 .inner-sec3 .sec3Contents .journey02 >ul >li.j-img2{
     width: 100%;
     height: 240px;
-    background: url(../img/sec03-journey-img02.jpg) no-repeat 50%;
+    background: url(../img/contents/section03/sec03-journey-img02.jpg) no-repeat 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .contents .section03 .inner-sec3 .sec3Contents .journey02 >ul >li.j-img2:hover{
-    background-image: url(../img/sec03-journey-img02_hover.jpg);
+    background-image: url(../img/contents/section03/sec03-journey-img02_hover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -588,13 +588,13 @@ h1.secTitle{
 .contents .section03 .inner-sec3 .sec3Contents .journey03 >ul >li.j-img3{
     width: 100%;
     height: 240px;
-    background: url(../img/sec03-journey-img03.jpg) no-repeat 50%;
+    background: url(../img/contents/section03/sec03-journey-img03.jpg) no-repeat 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .contents .section03 .inner-sec3 .sec3Contents .journey03 >ul >li.j-img3:hover{
-    background-image: url(../img/sec03-journey-img03_hover.jpg);
+    background-image: url(../img/contents/section03/sec03-journey-img03_hover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -685,42 +685,42 @@ h1.secTitle{
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-face >span{
-    background: url(../img/sec04_eventSns-face.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-face.png) no-repeat;
     cursor: pointer;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-face >span:hover{
-    background: url(../img/sec04_eventSns-face_hover.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-face_hover.png) no-repeat;
     transition: 0.5s;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-ins >span{
-    background: url(../img/sec04_eventSns-ins.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-ins.png) no-repeat;
     cursor: pointer;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-ins >span:hover{
-    background: url(../img/sec04_eventSns-ins-hover.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-ins-hover.png) no-repeat;
     transition: 0.5s;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-you >span{
-    background: url(../img/sec04_eventSns-you.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-you.png) no-repeat;
     cursor: pointer;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-you>span:hover{
-    background: url(../img/sec04_eventSns-you-hover.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-you-hover.png) no-repeat;
     transition: 0.5s;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-twi >span{
-    background: url(../img/sec04_eventSns-twi.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-twi.png) no-repeat;
     cursor: pointer;
 }
 
 .contents .section04 .inner-sec4 .sec4Sns >ul >li.sec4-sns-twi>span:hover{
-    background: url(../img/sec04_eventSns-twi-hover.png) no-repeat;
+    background: url(../img/contents/section04/sec04_eventSns-twi-hover.png) no-repeat;
     transition: 0.5s;
 }
 

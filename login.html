@@ -6,7 +6,7 @@
     <title>login</title>
     <script src="js/commons/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="css/commons/reset.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login/login.css">
 </head>
 
 <body>
@@ -17,6 +17,7 @@
                     <div class="location">
                         <img src="img/commons/header/gnb_location.png" alt="gnb-location">
                     </div>
+                    <!--location popup menu-->
                     <div class="locationPop">
                         <div class="inner-locationPop">
                             <span class="locaClose">X</span>
@@ -86,110 +87,10 @@
 
                         </div>
                     </div>
-                    <!--location popup menu-->
-                    <script>
-                        //location Icon 클릭 -> popmenu나타내기
-                        $('.location').on('click', locaPopFunc);
-
-                        function locaPopFunc() {
-                            $('.locationPop').css({
-                                'display': 'block'
-                            })
-                            $('.inner-locationPop').animate({
-                                'left': '0'
-                            });
-                        }
-                        //location Title 클릭 -> >ul>li 나타내기
-                        //North America
-                        $('.loca.northAmerica').on('click', northChildFunc);
-
-                        function northChildFunc() {
-                            $('.loca.northAmerica >ul >li.locaChild').slideToggle();
-                        }
-                        //Latin America
-                        $('.loca.latinAmerica').on('click', latinChildFunc);
-
-                        function latinChildFunc() {
-                            $('.loca.latinAmerica >ul >li.locaChild').slideToggle();
-                        }
-                        //Europe
-                        $('.loca.europe').on('click', europeChildFunc);
-
-                        function europeChildFunc() {
-                            $('.loca.europe >ul >li.locaChild').slideToggle();
-                        }
-                        //Eurasia
-                        $('.loca.eurasia').on('click', eurasiaChildFunc);
-
-                        function eurasiaChildFunc() {
-                            $('.loca.eurasia >ul >li.locaChild').slideToggle();
-                        }
-                        //Africa
-                        $('.loca.africa').on('click', africaChildFunc);
-
-                        function africaChildFunc() {
-                            $('.loca.africa >ul >li.locaChild').slideToggle();
-                        }
-                        //Asia
-                        $('.loca.asia').on('click', asiaChildFunc);
-
-                        function asiaChildFunc() {
-                            $('.loca.asia >ul >li.locaChild').slideToggle();
-                        }
-
-                        //Cloase 클릭 -> popmenu사라지게
-                        $('span.locaClose').on('click', locaCloseFunc);
-
-                        function locaCloseFunc() {
-                            $('.locationPop').css({
-                                'display': 'none'
-                            })
-                            $('.inner-locationPop').animate({
-                                'left': '-100%'
-                            });
-                        }
-                    </script>
-
-
-                    <div class="rightMenu">
-                        <div class="login">
+                    <script type="text/javascript" src="js/commons/header/topmenu-location.js"></script>
+                    <div class="login">
                             <a href="login.html"><img src="img/commons/header/gnb_login.png" alt="gnb_login" title="로그인"></a>
                         </div>
-                        <div class="search">
-                            <img src="img/commons/header/gnb_search.png" alt="search" title="검색">
-                        </div>
-                        <div class="searchPop">
-                            <div class="inner-searchPop">
-                                <span class="searchClose">X</span>
-                                <div class="search-area">
-                                    <ul>
-                                        <li>
-                                            <input type="text" name="search" id="search" placeholder="검색어를 입력해주세요">
-                                        </li>
-                                        <li>
-                                            <input type="button" value="Search">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--search popup menu-->
-                        <script>
-                            //search Icon 클릭 -> popmenu나타내기
-                            $('.search>img').on('click', searchPopFunc);
-
-                            function searchPopFunc() {
-                                $('.searchPop').fadeIn();
-                            }
-                            //Cloase 클릭 -> popmenu사라지게
-                            $('span.searchClose').on('click', searchCloseFunc);
-
-                            function searchCloseFunc() {
-                                $('.searchPop').fadeOut();
-                            }
-                        </script>
-
-                    </div>
                 </div>
                 <div class="middleMenu">
                     <div class="logo">
@@ -233,131 +134,8 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    var gnbLi = $('.gnb>ul>li');
-
-                    gnbLi.on('mouseenter', subShowFunc);
-
-                    function subShowFunc() {
-                        $('.subMenu').slideDown();
-                    }
-
-                    $('.inner-gnb').on('mouseleave', subHideFunc);
-
-                    function subHideFunc() {
-                        $('.subMenu').stop().slideUp();
-                    }
-
-
-                    var subUl = $('.subMenu>ul');
-                    //1.회사소개 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(0).hover(
-                        function() {
-                            gnbLi.eq(0).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(0).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(0).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(0).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //2. 브랜드 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(1).hover(
-                        function() {
-                            gnbLi.eq(1).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(1).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(1).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(1).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //3. 스토리 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(2).hover(
-                        function() {
-                            gnbLi.eq(2).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(2).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(2).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(2).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //4. 라이프 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(3).hover(
-                        function() {
-                            gnbLi.eq(3).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(3).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(3).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(3).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                    //5. 커뮤니티 : subMenu hover 시 mainGnb hover 상태
-                    subUl.eq(4).hover(
-                        function() {
-                            gnbLi.eq(4).css({
-                                'background': '#e61d2a'
-                            });
-                            $('.gnb>ul>li a').eq(4).css({
-                                'font-weight': 'bold',
-                                'color': '#fff'
-                            });
-                        },
-                        function() {
-                            gnbLi.eq(4).css({
-                                'background': '#fff'
-                            });
-                            $('.gnb>ul>li a').eq(4).css({
-                                'font-weight': 'normal',
-                                'color': '#000'
-                            });
-                        }
-                    );
-                </script>
             </div>
-
+            <!--scroll-header-->
             <div class="scroll-header">
                 <div class="inner-scroll-header">
                     <div class="sGnb">
@@ -419,61 +197,12 @@
                                     <img src="img/commons/header/gnb_login.png" alt="">
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/commons/header/gnb_search.png" alt="">
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
-            <script>
-                $(window).on('scroll', scrollFunc);
-
-                function scrollFunc() {
-                    var docScrollTop = $(document).scrollTop();
-                    if (docScrollTop > 300) {
-
-                        $('.inner-header').css({
-                            'display': 'none'
-                        });
-                        $('.scroll-header').fadeIn();
-
-                    } else if (docScrollTop <= 200) {
-
-                        $('.scroll-header').fadeOut(0);
-                        $('.inner-header').css({
-                            'display': 'block'
-                        });
-
-                    }
-                }
-
-                var sGnbLi = $('.sGnb>ul>li');
-
-                for (var i = 1; i < sGnbLi.length - 2; i++) {
-                    sGnbLi.eq(i).on('mouseenter', sGnbEnterFunc);
-
-                    function sGnbEnterFunc() {
-                        $('.sub').stop().slideDown();
-                        $('.inner-scroll-header').animate({
-                            height: '270px'
-                        });
-                    }
-                }
-
-                $('.sub').on('mouseleave', sGnbLeaveFunc);
-
-                function sGnbLeaveFunc() {
-                    $('.sub').stop().slideUp();
-                    $('.inner-scroll-header').animate({
-                        height: '70px'
-                    });
-                }
-            </script>
         </div>
+        <script type="text/javascript" src="js/commons/header/bottomMenu-gnb.js"></script>
         <div class="contents">
             <div class="inner-con">
                 <div class="login">
