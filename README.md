@@ -1,5 +1,5 @@
 ### README
-[Coca-cola](yeonzzy.github.io/coca-cola_2020)
+[Coca-cola](https://yeonzzy.github.io/coca-cola_2020/open-index.html)
 
 _UI designed & developed by_ **yeonji**
 
