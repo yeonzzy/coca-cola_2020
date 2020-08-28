@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+### README
+[Coca-cola](yeonzzy.github.io/coca-cola_2020)
 
-You can use the [editor on GitHub](https://github.com/yeonzzy/yeonji_coca-coloa_2020/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+_UI designed & developed by_ **yeonji**
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### About project
+- 코카콜라 코리아 리뉴얼 사이트 입니다.
+- append를 활용해 슬라이드쇼를 구현하였습니다🙂
 
-### Markdown
+### Preview
+![cola](https://user-images.githubusercontent.com/68604663/91529415-384f7200-e944-11ea-93be-274aa70737d3.jpg)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yeonzzy/yeonji_coca-coloa_2020/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Structure
+- index.html
+- js/
+  * commmons/
+    + header/
+      - bottomMenu-gnb.js
+      - topmenu-location.js
+  * contents/
+    + section01.js
+    + section02.js
+    + section03.js
+    + section04.js
+  * open/
+    + open.js
+- css/
+  * commons/
+    + header.css
+    + footer.css
+    + reset.css
+  * contens/
+    + nav.css
+    + section01.css
+    + section02.css
+    + section03.css
+    + section04.css
+  * join/
+    + join.css
+  * login/
+    + login.css
+- video/
+- img/
 
 ### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+☎️ 010-4158-3937 💌 yeonji99@gmail.com
